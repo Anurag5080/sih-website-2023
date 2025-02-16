@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/games.css">
+    <title>EcoBharat-Link</title>
+</head>
+
+<body>
+    <div class="load"></div>
+    <header class="text-gray-600 body-font header">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <!-- <svg img src="/Screenshot_2023-09-30_112631-removebg-preview.png" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg> -->
+                <img src="/WhatsApp_Image_2023-09-30_at_16.18.13_378e30a7-removebg-preview.png" width="30" height="30"
+                    alt="LOGO">
+                <span class="ml-3 text-xl title">EcoBharat-Link</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center navigation">
+                <a class="mr-5" href="/index.html">Home</a>
+                <div class="dropdown">
+                    <a class="mr-5" href="/complain.html">Services</a>
+                    <div class="dropdown-content navigation">
+                        <a href="/complain.html">Complain</a>
+                        <a href="/blogs.html">Blogs</a>
+                        <a href="/contactus.html">Contact Us</a>
+                    </div>
+                </div>
+                <a class="mr-5" href="/authorities.html">Authorities</a>
+                <a class="mr-5" href="/games.html">Games</a>
+                <a class="mr-5" href="aboutus.html">About Us</a>
+            </nav>
+            <!-- <button
+                class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0 login"
+                id="openPageButton">Sign
+                Up
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button> -->
+        </div>
+    </header>
+
+    
+    <section class="body-font">
+        <div class="container px-5 py-10 mx-auto">
+            <div class="flex flex-col text-center w-full ">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 gg">MORE INTERACTIVE GAMES COMING SOON!</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="body-font">
+        <div class="container px-5 py-2 mx-auto">
+            <div class="flex flex-col text-center w-full mb-6">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 gg">PLAY QUIZ AND LEARN</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Here you can play quiz and improve your knowledge about waste segregation, disposal and improve sanitization system.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="qa-container">
+        <div class="question">
+            <h2>Q1. The process of burning municipal solid wastes under suitable temperature and conditions in a
+                specific furnace is called-
+                ?</h2>
+        </div>
+
+        <div class="answers">
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback1', false)">A. Composting</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,  'feedback1', false)">B. Segregation</div>
+            <div class="answer" onclick="showFeedback('Correct!' , 'feedback1', true)">C. Incineration</div>
+            <div class="answer" onclick="showFeedback('Incorrect' , 'feedback1', false)">D. Sanitary Land Filling</div>
+        </div>
+        <div class="feedback" id="feedback1"></div>
+    </div>
+    <div class="qa-container">
+        <div class="question">
+            <h2>Q2. Where was India's first e-waste clinic inaugurated?</h2>
+        </div>
+
+        <div class="answers">
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback2', false)">A. West Bengal</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback2', false)">B. Andhra Pradesh</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback2', false)">C. Tamil Nadu</div>
+            <div class="answer" onclick="showFeedback('Correct!' ,'feedback2', true)">D. Madhya Pradesh</div>
+        </div>
+        <div class="feedback" id="feedback2"></div>
+    </div>
+    <div class="qa-container">
+        <div class="question">
+            <h2>Q3. Which one of the following is a hygienic way of disposing solid waste and is more suitable if the
+                waste contains more hazardous material and organic content?</h2>
+        </div>
+
+        <div class="answers">
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback3', false)">A. Composting</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback3', false)">B. Oxidation</div>
+            <div class="answer" onclick="showFeedback('Correct!' ,'feedback3', true)">C. Incineration</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback3', false)">D. Recycling</div>
+        </div>
+        <div class="feedback" id="feedback3"></div>
+    </div>
+    <div class="qa-container">
+        <div class="question">
+            <h2>Q4. Which of the following does not come under 3R's to get rid of waste?</h2>
+        </div>
+
+        <div class="answers">
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback4', false)">A. Reduce</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback4', false)">B. Reuse</div>
+            <div class="answer" onclick="showFeedback('Correct!' ,'feedback4', true)">C. Regeneration</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback4', false)">D. Recycle</div>
+        </div>
+        <div class="feedback" id="feedback4"></div>
+    </div>
+    <div class="qa-container">
+        <div class="question">
+            <h2>Q5. Which of the following gas is produced from landfill wastes?</h2>
+        </div>
+
+        <div class="answers">
+            <div class="answer" onclick="showFeedback('Correct!' ,'feedback5', true)">A. Biogas</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback5', false)">B. Natural Gas</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback5', false)">C. Liquifies Petroleum Gas</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback5', false)">D. All of the above</div>
+        </div>
+        <div class="feedback" id="feedback5"></div>
+    </div>
+    <div class="qa-container">
+        <div class="question">
+            <h2>Q6. Which of the following methods is better for the solid waste problem?</h2>
+        </div>
+
+        <div class="answers">
+            <div class="answer" onclick="showFeedback('Correct!' ,'feedback6', true)">A. Recycling</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback6', false)">B. Landfilling</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback6', false)">C. Both a and b</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback6', false)">D. None of the above</div>
+        </div>
+        <div class="feedback" id="feedback6"></div>
+    </div>
+    <div class="qa-container">
+        <div class="question">
+            <h2>Q7. Which of the following statements is incorrect for plastic wastes?</h2>
+        </div>
+
+        <div class="answers">
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback7', false)">A. Toxic fumes are produced when
+                plastic wastes are
+                burnt.</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback7', false)">B. It lasts for a longer period
+                of
+                time.</div>
+            <div class="answer" onclick="showFeedback('Correct!' ,'feedback7', true)">C. It is used to make compost.
+            </div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback7', false)">D. It can be used to make
+                recyclable
+                products.</div>
+        </div>
+        <div class="feedback" id="feedback7"></div>
+    </div>
+    <div class="qa-container">
+        <div class="question">
+            <h2>Q8. Which of the following is a biodegradable waste?</h2>
+        </div>
+
+        <div class="answers">
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback8', false)">A. Polythene bags</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback8', false)">B. Synthetic fiber</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback8', false)">C. Paper</div>
+            <div class="answer" onclick="showFeedback('Correct!' ,'feedback8', true)">D. Food waste</div>
+        </div>
+        <div class="feedback" id="feedback8"></div>
+    </div>
+    <div class="qa-container">
+        <div class="question">
+            <h2>Q9. When was Swachh Bharat Mission initiated by the Government of India?</h2>
+        </div>
+
+        <div class="answers">
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback9', false)">A. 26th January 2014</div>
+            <div class="answer" onclick="showFeedback('Correct!' ,'feedback9', true)">B. 2nd October 2014</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback9', false)">C. 2nd October 2015</div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback9', false)">D. 15th August 2015</div>
+        </div>
+        <div class="feedback" id="feedback9"></div>
+    </div>
+    <div class="qa-container">
+        <div class="question">
+            <h2>Q10. Under which rule of Government, guidelines for solid waste
+                management are followed today?
+            </h2>
+        </div>
+
+        <div class="answers">
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback10', false)">A. Municipal Solid Waste Rules,
+                2000
+            </div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback10', false)">B. Municipal Solid Waste Rules,
+                2016
+            </div>
+            <div class="answer" onclick="showFeedback('Incorrect' ,'feedback10', false)">C. Solid Waste Rules, 2000
+            </div>
+            <div class="answer" onclick="showFeedback('Correct!' ,'feedback10', true)">D. Solid Waste Rules, 2016</div>
+        </div>
+
+
+        <div class="feedback" id="feedback10"></div>
+    </div>
+
+    <script src="games.js"></script>
+
+
+
+    <div class="foot">
+        <footer class="text-gray-400 bg-gray-900 body-font">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap md:text-left text-center order-first">
+                    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">PAGES</h2>
+                        <nav class="list-none mb-10">
+
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/authorities.html">Authorities</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/complain.html">Complain</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/blogs.html">Blogs</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/login.html">Login</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">ABOUT US</h2>
+                        <nav class="list-none mb-10">
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/aboutus.html">Profiles</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/aboutus.html">Our Team</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">CONTACT US</h2>
+                        <nav class="list-none mb-10">
+                            <li>
+                                <a class="text-gray-400 footertitle" href="contactus.html">Email</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-400 footertitle" href="contactus.html">Number</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/contactus.html">Address</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">FEEDBACK</h2>
+                        <div
+                            class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
+                            <div class="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                                <label for="footer-field" class="leading-7 text-sm text-gray-400">Comment here!!</label>
+                                <input type="text" id="footer-field" name="footer-field"
+                                    class="w-full bg-gray-800 rounded border bg-opacity-40 border-gray-700 focus:bg-transparent focus:ring-2 focus:ring-green-900 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            </div>
+                            <button
+                                class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">Submit</button>
+                        </div>
+                        <p class="text-gray-500 text-sm mt-2 md:text-left text-center">"Your feedback matters! Share
+                            your thoughts with us and help enhance your experience. We appreciate your valuable input!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-800 bg-opacity-75">
+                <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+                    <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2"
+                            class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg> -->
+                        <img src="/WhatsApp_Image_2023-09-30_at_16.18.13_378e30a7-removebg-preview.png" width="30"
+                            height="30" alt="LOGO">
+                        <span class="ml-3 text-xl">EcoBharat-Link</span>
+                    </a>
+                    <p class="text-sm text-gray-400 sm:ml-6 sm:mt-0 mt-4">© 2023 EcoBharat-Link —
+                        <a href="" class="text-gray-500 ml-1" target="_blank"
+                            rel="noopener noreferrer">@Codecrafters03</a>
+                    </p>
+                    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                        <a class="text-gray-400">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-400">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-400">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-400">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path stroke="none"
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                </path>
+                                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

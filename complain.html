@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="complain.js"></script>
+    <link rel="stylesheet" href="/complain.css">
+    <title>EcoBharat-Link</title>
+</head>
+
+<body>
+    <div class="load"></div>
+    <header class="text-gray-600 body-font header">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <!-- <svg img src="/Screenshot_2023-09-30_112631-removebg-preview.png" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg> -->
+                <img src="/WhatsApp_Image_2023-09-30_at_16.18.13_378e30a7-removebg-preview.png" width="30" height="30"
+                    alt="LOGO">
+                <span class="ml-3 text-xl title">EcoBharat-Link</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center navigation">
+                <a class="mr-5" href="/index.html">Home</a>
+                <div class="dropdown">
+                    <a class="mr-5" href="/complain.html">Services</a>
+                    <div class="dropdown-content navigation">
+                        <a href="/complain.html">Complain</a>
+                        <a href="/blogs.html">Blogs</a>
+                        <a href="/contactus.html">Contact Us</a>
+                    </div>
+                </div>
+                <a class="mr-5" href="/authorities.html">Authorities</a>
+                <a class="mr-5" href="/games.html">Games</a>
+                <a class="mr-5" href="aboutus.html">About Us</a>
+            </nav>
+            <!-- <button
+                class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0 login"
+                id="openPageButton">Sign
+                Up
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button> -->
+        </div>
+    </header>
+
+    <section class="body-font">
+        <div class="container px-5 py-12 mx-auto">
+            <div class="flex flex-col text-center w-full mb-5">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 dd">COMPLAIN FORM</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">"Join us in creating a cleaner, greener
+                    future!
+                    Share your concerns about waste segregation, disposal, and sanitation. Together, we can
+                    make a meaningful change. Fill out our form."</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="main">
+
+        <div class="complainform">
+
+            <div class="wastetype">
+                <h2>Type of waste (Check all that apply):</h2>
+
+                <div id="wastetypebtns">
+
+                    <label><input type="checkbox" name="options" value="option1"
+                            onclick="handleButtonClick(this)">Household Garbages</label><br>
+                    <label><input type="checkbox" name="options" value="option2"
+                            onclick="handleButtonClick(this)">Industrial Debris</label><br>
+                    <label><input type="checkbox" name="options" value="option3"
+                            onclick="handleButtonClick(this)">Medical Waste</label><br>
+                    <label><input type="checkbox" name="options" value="option3"
+                            onclick="handleButtonClick(this)">E-Waste</label><br>
+                    <label><input type="checkbox" name="options" value="option3"
+                            onclick="handleButtonClick(this)">Construction Waste</label><br>
+                    <label><input type="checkbox" name="options" value="option3"
+                            onclick="handleButtonClick(this)">Hazardous Materials</label><br>
+                    <label><input type="radio" name="options" value="comment"
+                            onclick="handleButtonClick(this)">Other</label><br>
+
+                    <div id="comment-box1" style="display: none;">
+                        <h2>Please Specify:</h2>
+                        <textarea rows="3" cols="100"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wastequantity">
+                <h2>Quantity of Waste:</h2>
+                <div id="watequantitybtns">
+                    <label><input type="radio" name="options" value="option1" onclick="handleButton(this)">Needs
+                        Bicycle Carts Only
+                    </label><br>
+                    <label><input type="radio" name="options" value="option2" onclick="handleButton(this)">Requires
+                        Auto-Sized Vehicles
+                    </label><br>
+                    <label><input type="radio" name="options" value="option3" onclick="handleButton(this)">Demands
+                        Bigger Cranes</label><br>
+                    <label><input type="radio" name="options" value="specify" onclick="handleButton(this)">Custom
+                    </label>
+
+                    <div id="comment-box2" style="display: none;">
+                        <h2>Please Specify:</h2>
+                        <textarea rows="3" cols="100"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uploadimg">
+                <h2>Upload a Photo of the Waste (if available):</h2>
+
+                <div id="uploadimg">
+                    <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <label for="photo">Choose a Photo:</label>
+                        <input type="file" name="photo" id="photo" accept="image/*">
+                        <input type="submit" value="Upload">
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="locationdets">
+                <h2>Location Details:</h2>
+
+                <div id="locationdets">
+                    <label><input type="radio" name="options" value="option1" onclick="handle(this)">Auto-Fill
+                        Location, Allow Location Access</label><br>
+                    <label><input type="radio" name="options" value="mannuallocationwrap" onclick="handle(this)">Manual
+                        Input</label><br>
+                    <div id="mannuallocationwrap1" class="manualinput" style="display: none;">
+                        <label for="fname">Address Line 1:</label>
+                        <input type="text" id="fname1" name="fname" size="80"><br>
+                        <label for="fname">Address Line 2:</label>
+                        <input type="text" id="fname2" name="fname" size="80"><br>
+                        <label for="pin">Pincode</label>
+                        <input type="text" id="pin1" name="pin" maxlength="6" size="6"><br>
+                        <select id="state_input" name="state_input"></select>
+                        <select name="district_input" id="district_input"></select><br>
+                        <script language="javascript">
+                            populateStates("state_input", "district_input");
+                        </script>
+                        <label for="fname">Nearest Municipality:</label>
+                        <input type="text" id="fname3" name="fname" size="50"><br>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="timeanddate">
+                <h2>Preferred Collection Date and Time:</h2>
+
+                <div id="timeanddatebtns">
+
+                    <label><input type="radio" name="options" value="option1"
+                            onclick="btnclick(this)">Anytime</label><br>
+                    <label><input type="radio" name="options" value="specified"
+                            onclick="btnclick(this)">Specified</label><br>
+
+                    <div id="specifiedtimeanddate" style="display: none;">
+                        <label>Date:</label>
+                        <input type="date" id="date"><br>
+                        <label>From:</label>
+                        <input type="time" id="time">
+                        <label>To:</label>
+                        <input type="time" id="time">
+                    </div>
+                </div>
+            </div>
+
+            <div class="contactinfo">
+                <h2>Contact Information:</h2>
+
+                <div id="contactinfoform">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="email69"><br>
+                    <label for="pin">Phone Number</label>
+                    <input type="text" id="pin69" name="pin" maxlength="10" size="10"><br>
+
+                </div>
+            </div>
+
+            <div class="info1">
+                <h2>Do you know of any nearby active NGOs or volunteers interested in collaborating?</h2>
+
+                <div id="info1">
+                    <label><input type="radio" name="options" value="option1" onclick="info1Click(this)">No</label><br>
+                    <label><input type="radio" name="options" value="info1true"
+                            onclick="info1Click(this)">Yes</label><br>
+
+                    <div id="info1box" style="display: none;">
+                        <h2>Please Specify:</h2>
+                        <textarea rows="3" cols="100"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info2">
+                <h2>I agree to the Terms and Conditions:</h2>
+                <div id="infoid2">
+                    <label><input type="checkbox">I Accept T&Cs</label><br>
+                </div>
+            </div>
+
+            <div class="info3">
+                <h2>I pledge to work diligently to maintain the cleanliness of my country:</h2>
+                <div id="infoid3">
+                    <label><input type="checkbox">Count me in for a cleaner country!</label><br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <button
+        class="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 mb-12 focus:outline-none hover:bg-green-600 rounded text-lg"
+        onclick="showPopup()">Submit</button>
+    <div id="popup" class="popup">
+        <p>Submitted!</p>
+      </div>
+    <div class="foot">
+        <footer class="text-gray-400 bg-gray-900 body-font">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap md:text-left text-center order-first">
+                    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">PAGES</h2>
+                        <nav class="list-none mb-10">
+
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/authorities.html">Authorities</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/games.html">Games</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/blogs.html">Blogs</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/login.html">Login</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">ABOUT US</h2>
+                        <nav class="list-none mb-10">
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/aboutus.html">Profiles</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/aboutus.html">Our Team</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">CONTACT US</h2>
+                        <nav class="list-none mb-10">
+                            <li>
+                                <a class="text-gray-400 footertitle" href="contactus.html">Email</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-400 footertitle" href="contactus.html">Number</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-400 footertitle" href="/contactus.html">Address</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">FEEDBACK</h2>
+                        <div
+                            class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
+                            <div class="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                                <label for="footer-field" class="leading-7 text-sm text-gray-400">Comment here!!</label>
+                                <input type="text" id="footer-field" name="footer-field"
+                                    class="w-full bg-gray-800 rounded border bg-opacity-40 border-gray-700 focus:bg-transparent focus:ring-2 focus:ring-green-900 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            </div>
+                            <button
+                                class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">Submit</button>
+                        </div>
+                        <p class="text-gray-500 text-sm mt-2 md:text-left text-center">"Your feedback matters! Share
+                            your thoughts with us and help enhance your experience. We appreciate your valuable input!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-800 bg-opacity-75">
+                <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+                    <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2"
+                            class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg> -->
+                        <img src="/WhatsApp_Image_2023-09-30_at_16.18.13_378e30a7-removebg-preview.png" width="30"
+                            height="30" alt="LOGO">
+                        <span class="ml-3 text-xl">EcoBharat-Link</span>
+                    </a>
+                    <p class="text-sm text-gray-400 sm:ml-6 sm:mt-0 mt-4">© 2023 EcoBharat-Link —
+                        <a href="" class="text-gray-500 ml-1" target="_blank"
+                            rel="noopener noreferrer">@Codecrafters03</a>
+                    </p>
+                    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                        <a class="text-gray-400">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-400">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-400">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-400">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path stroke="none"
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                </path>
+                                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
